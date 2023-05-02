@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Cards</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f2f2f2;
+      }
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+  
+      .card {
+        position: relative;
+        background-color: #fff;
+        border-radius: 20px;
+        margin: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        height: 40%;
+        width: 100%;
+        background-color: #7c046c;
+        border-radius: 20px 20px 0 0;
+       
+      }
+      .card .card__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        position: relative;
+        z-index: 100;
+
+      }
+      .card .card__content .card__image{
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        padding: 3px;
+        background-color: #7c046c;
+      }
+      .card .card__content .card__image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid white;
+      }
+      .card .card__social-media-icons{
+        position: absolute;
+        top:10px;
+        left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .card .card__social-media-icons i {
+        color: rgba(255, 255, 255, .6);
+        margin-top: 10px;
+        transition: all .3s ease;
+        cursor: pointer;
+      }
+      .card .card__social-media-icons i:hover{
+        color: rgba(255, 255, 255, 1);
+        font-size: 20px;
+      }
+      .card .card__user-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        font-weight: 500;
+      }
+      .card__user-description .name {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .card__user-description .user__profession{
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .card .card__user-rating{
+        display: flex;
+        align-items: center;
+        margin-top: 18px;
+      }
+      .card .card__user-rating i{
+        font-size: 18px;
+        margin: 0 2px;
+        
+      }
+      .card .card__user-rating i:is(:nth-child(-n+3)){
+        color: #7d2ae8;
+      }
+      .card .card__buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .card .card__buttons button{
+        background-color: #7d2ae8;
+        outline: none;
+        border: none;
+        color: #fff;
+        padding: 8px 22px;
+        border-radius: 20px;
+        font-size: 14px;
+        margin: 2px;
+        transition: all .3s ease;
+        cursor: pointer;
+      }
+      .card .card__buttons button:hover{
+        background-color: #6616d0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__image">
+          <img
+            src="https://tinypic.host/images/2023/04/27/996_1000.jpeg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="card__social-media-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="card__user-description">
+          <span class="name">Peter Thua</span>
+          <span class="user__profession">Web Developer</span>
+        </div>
+        <div class="card__user-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="card__buttons">
+          <button class="btn">About me</button>
+          <button class="btn">Hire me</button>
+        </div>
+      </div>
+    </div>
+    </section>
+  </body>
+</html>
